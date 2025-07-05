@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { MdOutlinePets, MdClose, MdOutlineLogout } from "react-icons/md";
 import { FiSettings, FiHome, FiUser } from "react-icons/fi";
 import { SlBadge } from "react-icons/sl";
@@ -15,6 +16,8 @@ interface SidebarProps {
 }
 
 const Sidebar = ({ isOpen, isMobile, onClose }: SidebarProps) => {
+  const pathname = usePathname();
+
   return (
     <div
       className={`fixed top-0 left-0 z-50 h-full bg-white shadow-lg transition-all duration-300 ${
@@ -40,87 +43,119 @@ const Sidebar = ({ isOpen, isMobile, onClose }: SidebarProps) => {
         )}
       </div>
       
-      <nav className="h-[calc(100vh-200px)] overflow-y-auto px-4 py-4">
+      <nav className="h-[calc(100vh-200px)] overflow-y-auto px-4 py-2">
         <div>
-          <h4 className="text-lg text-black mb-4 font-semibold">Main Menu</h4>
-          <ul className="space-y-4 px-2">
+          <h4 className="text-lg text-black mb-2 font-semibold">Main Menu</h4>
+          <ul className=" space-y-1">
             <li>
               <Link
                 href="/"
-                className="text-slate-800 text-sm flex items-center font-medium hover:text-yellow-500 transition-all"
+                className={`text-sm flex items-center font-medium transition-all px-3 py-2 rounded-lg ${
+                  pathname === "/"
+                    ? "bg-yellow-50 text-yellow-600 border-r-2 border-yellow-500"
+                    : "text-slate-800 group  hover:bg-yellow-50"
+                }`}
               >
-                <FiHome className="w-4 h-4 mr-3" />
+                <FiHome className={`w-4 h-4 mr-3 ${pathname === "/" ? "text-yellow-600" : "text-slate-600 group-hover:text-yellow-400"}`} />
                 <span>Overview</span>
               </Link>
             </li>
             <li>
               <Link
                 href="/dna"
-                className="text-slate-800 text-sm flex items-center font-medium hover:text-yellow-500 transition-all"
+                className={`text-sm flex items-center font-medium transition-all px-3 py-2 rounded-lg ${
+                  pathname === "/dna"
+                    ? "bg-yellow-50 text-yellow-600 border-r-2 border-yellow-500"
+                    : "text-slate-800 group hover:bg-yellow-50"
+                }`}
               >
-                <LuDna className="w-4 h-4 mr-3" />
+                <LuDna className={`w-4 h-4 mr-3 ${pathname === "/dna" ? "text-yellow-600" : "text-slate-600 group-hover:text-amber-400"}`} />
                 <span>DNA</span>
               </Link>
             </li>
             <li>
               <Link
                 href="/care"
-                className="text-slate-800 text-sm flex items-center font-medium hover:text-yellow-500 transition-all"
+                className={`text-sm flex items-center font-medium transition-all px-3 py-2 rounded-lg ${
+                  pathname === "/care"
+                    ? "bg-yellow-50 text-yellow-600 border-r-2 border-yellow-500"
+                    : "text-slate-800 group hover:bg-yellow-50"
+                }`}
               >
-                <FaHandHoldingHeart className="w-4 h-4 mr-3" />
+                <FaHandHoldingHeart className={`w-4 h-4 mr-3 ${pathname === "/care" ? "text-yellow-600" : "text-slate-600 group-hover:text-amber-400"}`} />
                 <span>Care</span>
               </Link>
             </li>
             <li>
               <Link
                 href="/orders"
-                className="text-slate-800 text-sm flex items-center font-medium hover:text-yellow-500 transition-all"
+                className={`text-sm flex items-center font-medium transition-all px-3 py-2 rounded-lg ${
+                  pathname === "/orders"
+                    ? "bg-yellow-50 text-yellow-600 border-r-2 border-yellow-500"
+                    : "text-slate-800 group hover:bg-yellow-50"
+                }`}
               >
-                <LuShoppingCart className="w-4 h-4 mr-3" />
+                <LuShoppingCart className={`w-4 h-4 mr-3 ${pathname === "/orders" ? "text-yellow-600" : "text-slate-600 group-hover:text-amber-400"}`} />
                 <span>Orders</span>
               </Link>
             </li>
             <li>
               <Link
                 href="/referrals"
-                className="text-slate-800 text-sm flex items-center font-medium hover:text-yellow-500 transition-all"
+                className={`text-sm flex items-center font-medium transition-all px-3 py-2 rounded-lg ${
+                  pathname === "/referrals"
+                    ? "bg-yellow-50 text-yellow-600 border-r-2 border-yellow-500"
+                    : "text-slate-800 group hover:bg-yellow-50"
+                }`}
               >
-                <SlBadge className="w-4 h-4 mr-3" />
+                <SlBadge className={`w-4 h-4 mr-3 ${pathname === "/referrals" ? "text-yellow-600" : "text-slate-600 group-hover:text-amber-400"}`} />
                 <span>Referrals</span>
               </Link>
             </li>
           </ul>
         </div>
         
-        <hr className="my-6 border-gray-200" />
+        <hr className="my-4 border-gray-200" />
         
         <div>
-          <h4 className="text-lg font-semibold text-black mb-4">Preferences</h4>
-          <ul className="space-y-4 px-2">
+          <h4 className="text-lg font-semibold text-black mb-2">Preferences</h4>
+          <ul className="space-y-1">
             <li>
               <Link
                 href="/setting"
-                className="text-slate-800 text-sm flex items-center font-medium hover:text-yellow-500 transition-all"
+                className={`text-sm flex items-center font-medium transition-all px-3 py-2 rounded-lg ${
+                  pathname === "/setting"
+                    ? "bg-yellow-50 text-yellow-600 border-r-2 border-yellow-500"
+                    : "text-slate-800 group hover:bg-yellow-50"
+                }`}
               >
-                <FiSettings className="w-4 h-4 mr-3" />
+                <FiSettings className={`w-4 h-4 mr-3 ${pathname === "/setting" ? "text-yellow-600" : "text-slate-600 group-hover:text-amber-400"}`} />
                 <span>Settings</span>
               </Link>
             </li>
             <li>
               <Link
                 href="/support"
-                className="text-slate-800 text-sm flex items-center font-medium hover:text-yellow-500 transition-all"
+                className={`text-sm flex items-center font-medium transition-all px-3 py-2 rounded-lg ${
+                  pathname === "/support"
+                    ? "bg-yellow-50 text-yellow-600 border-r-2 border-yellow-500"
+                    : "text-slate-800 group hover:bg-yellow-50"
+                }`}
               >
-                <CgSupport className="w-4 h-4 mr-3" />
+                <CgSupport className={`w-4 h-4 mr-3 ${pathname === "/support" ? "text-yellow-600" : "text-slate-600 group-hover:text-amber-400"}`} />
                 <span>Support & Help</span>
               </Link>
             </li>
             <li>
               <Link
                 href="/profile"
-                className="text-slate-800 text-sm flex items-center font-medium hover:text-yellow-500 transition-all"
+                className={`text-sm flex items-center font-medium transition-all px-3 py-2 rounded-lg ${
+                  pathname === "/profile"
+                    ? "bg-yellow-50 text-yellow-600 border-r-2 border-yellow-500"
+                    : "text-slate-800 group hover:bg-yellow-50"
+                }`}
               >
-                <FiUser className="w-4 h-4 mr-3" />
+                <FiUser className={`w-4 h-4 mr-3 ${pathname === "/profile" ? "text-yellow-600" : "text-slate-600 group-hover:text-amber-400"}`} />
                 <span>Profile</span>
               </Link>
             </li>
