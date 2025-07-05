@@ -1,6 +1,6 @@
 "use client";
 
-import { FiCalendar, FiEdit2 } from "react-icons/fi";
+import { FiEdit2 } from "react-icons/fi";
 import { BsCake } from "react-icons/bs";
 
 const PetProfileCard = () => (
