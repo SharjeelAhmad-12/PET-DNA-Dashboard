@@ -35,7 +35,7 @@ const RecentTipsCard = () => {
           <li key={tip.id} className="mb-4 last:mb-0">
             <div className="flex items-start gap-3 text-sm">
               <div
-                className="w-10 h-10 mb-4 p-3 rounded-full text-yellow-400 flex items-center border border-y-amber-300"
+                className="p-3 rounded-full text-yellow-400 flex items-center border border-y-amber-300"
                 style={{ boxShadow: "inset 0 0 15px rgba(255, 255, 0, 0.5)" }}
               >
                 {tip.icon}

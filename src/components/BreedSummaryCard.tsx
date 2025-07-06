@@ -48,10 +48,10 @@ const BreedSummaryCard = () => {
           </h2>
           <Link
             href="#"
-            className="text-cyan-500 font-semibold flex items-center gap-2 hover:underline text-base sm:text-lg"
+            className="text-cyan-500 font-semibold flex items-center gap-2 hover:underline text-base sm:text-lg group transition"
           >
             View Full Report
-            <FaArrowRight className="text-cyan-400" />
+            <FaArrowRight className="text-cyan-400 transform transition-transform duration-300 ease-in-out group-hover:translate-x-1.5" />
           </Link>
         </div>
 

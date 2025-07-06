@@ -50,7 +50,6 @@ export default function Layout({ children }: LayoutProps) {
       <div className={`transition-all duration-300 ease-in-out ${contentMargin}`}>
         <AppBar
           onToggleSidebar={toggleSidebar}
-          isMobile={isMobile}
         />
         <main className="p-6">{children}</main>
       </div>

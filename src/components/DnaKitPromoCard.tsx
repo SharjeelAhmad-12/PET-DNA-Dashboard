@@ -5,7 +5,7 @@ import { FaGift } from "react-icons/fa";
 
 const DnaKitPromoCard = () => {
   return (
-    <section className="bg-white w-full  rounded-md shadow-sm p-6 flex flex-col max-w-7xl">
+    <section className="bg-gradient-to-r from-[#23434B] via-[#2e5962] to-[#3b717c] w-full  rounded-md shadow-sm p-6 flex flex-col max-w-7xl">
       <div>
         <div
           className="w-10 h-10 mb-4 rounded-md text-yellow-400 grid place-items-center border border-y-amber-300"
@@ -14,11 +14,11 @@ const DnaKitPromoCard = () => {
           <FaGift size={18} />
         </div>
 
-        <h2 className="font-bold leading-snug mb-2 text-3xl">
+        <h2 className="font-bold leading-snug mb-2 text-white text-3xl">
           Start your pets wellness journey
         </h2>
 
-        <p className="text-md text-gray-600 max-w-[29rem]">
+        <p className="text-md text-white max-w-[29rem]">
           Get the PetDNA+ Kit to unlock breed insights, health risks, and a
           personalized care plan — designed just for your dog or cat.
         </p>
