@@ -87,7 +87,7 @@ const BreedSummaryCard = () => {
 
       <div className="text-center  p-4 sm:p-5 border-t border-gray-200">
         <p className="text-slate-600 text-sm sm:text-base">
-          Your pet's unique breed mix influences their traits and health needs.
+          Your pets unique breed mix influences their traits and health needs.
         </p>
       </div>
     </section>

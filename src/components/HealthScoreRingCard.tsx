@@ -35,7 +35,7 @@ const options = {
 const HealthScoreRingCard = () => (
     <section className="bg-white rounded-xl shadow-sm p-4 sm:p-7 flex flex-col w-full max-w-7xl">
         <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-800 mb-2">Health Score Ring</h2>
-        <p className="text-base sm:text-lg text-slate-600 mb-4">Calculated from your pet's</p>
+        <p className="text-base sm:text-lg text-slate-600 mb-4">Calculated from your pets</p>
         <div className="flex flex-col items-center justify-center flex-1 w-full">
             <div className="w-32 h-32 sm:w-48 sm:h-48 relative mb-6">
                 <Doughnut data={data} options={options} />

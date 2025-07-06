@@ -168,6 +168,7 @@ const Sidebar = ({ isOpen, isMobile, onClose }: SidebarProps) => {
           <img
             src="https://avatar.iran.liara.run/public/34"
             className="w-10 h-10 rounded-md border-2 border-white"
+            alt="User Avatar"
           />
           <div className="ml-4">
             <p className="text-sm text-slate-900 font-medium">Sharjeel Ahmad</p>
