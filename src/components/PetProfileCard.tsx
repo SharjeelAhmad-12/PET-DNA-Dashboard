@@ -40,21 +40,22 @@ const PetProfileCard = () => (
       </div>
     </div>
 
-    <div className="flex items-center justify-between bg-gradient-to-r from-amber-50 to-orange-50 p-3 border border-amber-200 rounded-md text-sm">
-      <div className="flex items-center gap-5 text-slate-600">
+    <div className="flex items-center  justify-between bg-gradient-to-r from-amber-50 to-orange-50 p-3 border border-amber-200 rounded-md text-sm">
+      <div className="flex items-center gap-5 text-slate-600 w-full">
         <div
-          className="w-10 h-10  rounded-md text-yellow-400 grid place-items-center border border-y-amber-300"
+          className="sm:w-10 w-13 h-10  rounded-md text-yellow-400 grid place-items-center border border-y-amber-300"
           style={{ boxShadow: "inset 0 0 15px rgba(255, 255, 0, 0.5)" }}
         >
           <BsCake size={24} className="text-yellow-600" />
         </div>
-
-        <div className="flex flex-col">
-          <h3>Birthday</h3>
-          <span className="font-bold text-slate-900">12 August 2018</span>
+        <div className="flex flex-col sm:flex-row justify-between sm:items-center w-full">
+          <div className="flex flex-col">
+            <h3>Birthday</h3>
+            <span className="font-bold text-slate-900">12 August 2018</span>
+          </div>
+          <span className="font-semibold text-slate-800">5 years old</span>
         </div>
       </div>
-      <span className="font-semibold text-slate-800">5 years old</span>
     </div>
   </section>
 );

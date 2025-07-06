@@ -5,7 +5,7 @@ import { FaGift } from "react-icons/fa";
 
 const DnaKitPromoCard = () => {
   return (
-    <section className="bg-white w-full  rounded-md shadow-sm p-6 flex flex-col ">
+    <section className="bg-white w-full  rounded-md shadow-sm p-6 flex flex-col max-w-7xl">
       <div>
         <div
           className="w-10 h-10 mb-4 rounded-md text-yellow-400 grid place-items-center border border-y-amber-300"
@@ -24,7 +24,7 @@ const DnaKitPromoCard = () => {
         </p>
       </div>
 
-      <button className="mt-7 xl:mt-auto w-44 bg-yellow-400 text-white  text-sm font-bold px-4 py-2 rounded  transition">
+      <button className="mt-7 xl:mt-auto w-56 bg-yellow-400 text-white text-base sm:text-lg  py-3 sm:py-4 rounded-lg font-bold px-6  transition">
         Get the Kit for $129
       </button>
     </section>
