@@ -30,7 +30,7 @@ const Sidebar = ({ isOpen, isMobile, onClose }: SidebarProps) => {
     >
       <div className="flex items-center justify-between p-4 border-b border-gray-200">
         <div className="flex items-center gap-2">
-          <MdOutlinePets className="text-yellow-400 text-2xl" />
+          <MdOutlinePets className="text-yellow-400 text-2xl rotate-45" />
           <h2 className="font-bold text-2xl ">Pet DNA+</h2>
         </div>
         {isMobile && (
