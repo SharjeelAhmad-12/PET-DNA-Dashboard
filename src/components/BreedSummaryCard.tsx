@@ -9,6 +9,7 @@ import {
 } from "chart.js";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
+import { MdOutlinePets  } from "react-icons/md";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -59,7 +60,7 @@ const BreedSummaryCard = () => {
           <div className="relative w-36 h-36 sm:w-48 sm:h-48">
             <Doughnut data={data} options={options} />
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <FaArrowRight className="text-gray-300 text-4xl sm:text-5xl" />
+              <MdOutlinePets className="text-gray-300 text-4xl sm:text-5xl" />
             </div>
           </div>
 
